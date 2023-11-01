@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+:root{--hover-claro: rgb(128, 200, 255);
+    --hover-medio:rgb(137, 202, 191);
+    --hover-escuro: rgb(64, 95, 151);
+}
+
+.body{
+    background-color: #ebebeb;
+    display: grid;
+    grid-template-areas: "header header header"
+                         "sidebar gambiarra gambiarra"
+                         "sidebar contente contente "
+}
+#header{
+    grid-area: header;
+    padding: 5%;
+    background-color:  #ebebeb;
+}
+#header button{
+    margin-left: 100px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.5s;
+}
+#header button:hover{
+    background-color: var(--hover-claro);
+    cursor: pointer;
+}
+.logoEs{
+    width: 150px;
+}
+#sidebar{
+    grid-area: sidebar;
+    width:216px;
+    height: 484px;
+    background-color: #ffffff;
+}
+#sidebar button{
+    border: 0px;
+    width: 216px;
+    height:42px;
+    transition: 0.5s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#sidebar button:hover{
+    background-color: var(--hover-medio);
+    cursor: pointer;
+}
+#gambiarra{
+    display:flex ;
+    margin-left: 220px;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#contente{
+    grid-area: contente;
+    display: flex;
+    margin-top: 50px;
+    width: 750px;
+    height: 484px;
+    background-color:  #ebebeb;
+    gap: 30px;
+}
+.ar{
+    background-color: #ffffff;
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0.5px 2px 0.5px rgb(197, 197, 196);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#btnSubir{
+    width: 28px;
+    height: 28px;
+    left: 1000px;
+    top: 500px;
+    position: fixed;
+    background:rgb(57, 180, 241);
+    border-radius: 10px;
+    padding: 15px 15px 15px 15px;
+    }
+    #btnSubir:hover{
+        background-color: var(--hover-escuro);
+    }
+
+
+@media screen and (max-width:992px){
+    #sidebar{
+        display: none;
+    }
+    .body{
+        grid-template-areas: "header "
+                         "gambiarra "
+                         "contente  "
+    }
+    #btnSubir{
+        left: 600px;
+    }
+}
